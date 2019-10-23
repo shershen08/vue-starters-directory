@@ -37,6 +37,6 @@ const list:ListItem[] = [
             'express', 'mongo', 'backend', 'axios'
         ]
     }
-]
+];
 
 export default list;

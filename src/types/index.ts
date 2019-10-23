@@ -6,7 +6,7 @@ export interface ListItem {
     repo: string;
     stars: number;
     features: string[];
-};
+}
 
 // export interface List {
 //     ListItem[];
