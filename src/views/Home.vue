@@ -1,7 +1,12 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <Search/>
+    <header>
+      <img alt="Vue logo" src="../assets/logo.png" style="float:left">
+      <h1>Starters directory</h1>
+    </header>
+    <section>
+      <Search/>
+    </section>
   </div>
 </template>
 
@@ -16,3 +21,8 @@ import Search from '@/components/search/Search.vue'; // @ is an alias to /src
 })
 export default class Home extends Vue {}
 </script>
+<style lang="scss" scoped>
+  section {
+    clear: both;
+  }
+</style>

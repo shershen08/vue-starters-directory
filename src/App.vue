@@ -1,10 +1,14 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
+    <footer>
+      <div id="nav">
+      <router-link to="/">Search</router-link> |
+      <router-link to="/about">Contribute</router-link>
+      Share:
+      <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=#vue%20starter%20kit%20search%20 - shershen08.github.io/vue-starters-directory/">Tweet</a>
+    </div>
+    </footer>
   </div>
 </template>
 

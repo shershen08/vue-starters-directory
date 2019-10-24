@@ -1,9 +1,8 @@
 <template>
   <div class="wrapper">
-    <SearchForm></SearchForm>
+    <SearchForm @search="onSeachChanged"/>
     <div class="results">
       <SearchItem v-for="(result,index) in results" :key="index" :details="result"/>
-      {{search}}
     </div>
   </div>
 </template>
@@ -21,6 +20,13 @@ import SearchForm from './SearchForm.vue';
             SearchItem,
             SearchForm
         },
+        methods: {
+          onSeachChanged(val) {
+            this.results = this.list.filter((i: ListItem) => {
+              return i.title.includes(val);
+            });
+          }
+        }
     })
 
 export default class Search extends Vue {
@@ -28,21 +34,13 @@ export default class Search extends Vue {
       SearchItem,
       SearchForm,
   };
-  @Model() search!: string;
-  //@Provide() foo = 'foo'
-  @Prop() list: ListItem[] = LIST;
-  @Prop() results!: ListItem[];
+  // @Prop() public list: ListItem[] = LIST;
+  // @Prop() public results!: ListItem[];
   data() {
     return {
-      //list: LIST,
-      //results: []
+      list: LIST,
+      results: []
     }
-  }
-  @Watch('search')
-  onSeachChanged(val: string, oldVal: string) {
-    this.results = this.list.filter((i: ListItem) => {
-     return i.title.includes(val);
-    });
   }
   mounted() {
     this.results = this.list;
