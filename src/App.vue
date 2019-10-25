@@ -9,7 +9,7 @@
     <router-view/>
     <footer>
       <div id="nav">
-        <a>v.0.1</a>
+        <span>v.0.1</span>
       <router-link to="/">Search</router-link>
       <router-link to="/about">About</router-link>
     
@@ -32,6 +32,7 @@ export default App;
 </script>
 <style lang="scss">
 @import url(./assets/pixel-style.css);
+
 footer {
     height: 40px;
     width: 100%;
@@ -63,6 +64,9 @@ header {
       flex-shrink: 1;
       flex-basis: auto;
       align-self: auto;
+      img {
+            width: 100%;
+      }
     }
 }
  a {
