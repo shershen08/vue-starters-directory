@@ -1,6 +1,6 @@
 import { ListItem } from '@/types/index';
 
-const list:ListItem[] = [
+const list: ListItem[] = [
     {
         title: 'Vue Starter Kit',
         published: true,
@@ -21,7 +21,7 @@ const list:ListItem[] = [
     },
     {
         title: 'vue-seed',
-        stars: 0,
+        stars: 20,
         published: true,
         repo: 'https://github.com/dulin666/vue-seed',
         features: [
@@ -30,16 +30,17 @@ const list:ListItem[] = [
     },
     {
         title: 'vue-express-mongo-boilerplate',
-        stars: 0,
+        stars: 2300,
         published: true,
         repo: 'https://github.com/icebob/vue-express-mongo-boilerplate',
         features: [
-            'express', 'mongo', 'backend', 'axios',
+            'express', 'mongo', 'backend', 'axios', 'apollo', 'graphql',
+            'router', 'axios', 'jade', 'vuex', 'passportjs',
         ],
     },
     {
         title: 'vuesion',
-        stars: 18000,
+        stars: 1800,
         published: true,
         repo: 'https://github.com/vuesion/vuesion',
         features: [

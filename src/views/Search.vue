@@ -1,9 +1,5 @@
 <template>
   <div class="home">
-    <header>
-      <img alt="Vue logo" src="../assets/logo.png" style="float:left">
-      <h1>Starters directory</h1>
-    </header>
     <section>
       <Search/>
     </section>

@@ -8,15 +8,15 @@ import { Component, Model, Prop, Vue, Watch, Emit } from 'vue-property-decorator
 
 @Component
 export class SearchForm extends Vue {
-    data() {
+    private data() {
         return {
-            search: ''
-        }
+            search: '',
+        };
     }
     @Watch('search')
-    @Emit('search')
-    onSeachChanged(val: string, oldVal: string) {
-        return val
+    @Emit('search:text')
+    private onSeachChanged(val: string, oldVal: string) {
+        return val;
     }
 }
 export default SearchForm;

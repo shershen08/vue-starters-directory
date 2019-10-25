@@ -3,19 +3,24 @@
         <h3>{{details.title}}</h3>
         <div class="other-details">
             ⭐️{{details.stars}} | <a :href="details.repo">🔗{{details.repo.replace('https://', '')}}</a>
-            <br>
-            <div class="feature" v-for="(feature, index) in details.features" :key="index">
-                {{feature}}
+            <div class="features-list">
+                <div class="feature-item" v-for="(feature, index) in details.features" :key="index" @click="searchTag(feature)">
+                    {{feature}}
+                </div>
             </div>
         </div>
     </section>
 </template>
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue, Emit } from 'vue-property-decorator';
 
 @Component
 export class SearchItem extends Vue {
     @Prop() private details!: object;
+    @Emit('search:tag')
+    private searchTag(feature: string) {
+        return feature;
+    }
 }
 export default SearchItem;
 </script>
@@ -33,11 +38,15 @@ section {
     .other-details {
         text-align: left
     }
-    .feature {
+    .feature-item {
         display: inline;
         border: 1px solid #ccc;
         padding: 1px 5px;
         border-radius: 4px;
         margin-right: 5px;
+        cursor: pointer;
+    }
+    .features-list {
+        margin-top: 10px;
     }
 </style>

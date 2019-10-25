@@ -1,49 +1,53 @@
 <template>
   <div class="wrapper">
-    <SearchForm @search="onSeachChanged"/>
+    <SearchForm @search:text="onSeachTextChanged"/>
     <div class="results">
-      <SearchItem v-for="(result,index) in results" :key="index" :details="result"/>
+      <p class="subtitle results-count">{{results.length}} starters found</p>
+      <SearchItem v-for="(result,index) in results" :key="index" :details="result" @search:tag="onSeachTagChanged"/>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
 import { ListItem } from '@/types/index';
-import { Component, Prop, Model, Provide, Watch } from 'vue-property-decorator';
-import LIST from './../data';
+import { Component, Prop, Model, Provide, Watch, Vue } from 'vue-property-decorator';
+import LIST from './../../../data/starters';
 import SearchItem from './SearchItem.vue';
 import SearchForm from './SearchForm.vue';
 
 @Component({
+        name: 'Search',
         components: {
             SearchItem,
-            SearchForm
+            SearchForm,
         },
-        methods: {
-          onSeachChanged(val) {
-            this.results = this.list.filter((i: ListItem) => {
-              return i.title.includes(val);
-            });
-          }
-        }
     })
 
 export default class Search extends Vue {
-  components = {
+  public list: ListItem[] = LIST;
+  public results!: ListItem[];
+  private components = {
       SearchItem,
       SearchForm,
   };
-  // @Prop() public list: ListItem[] = LIST;
-  // @Prop() public results!: ListItem[];
-  data() {
+  private data() {
     return {
       list: LIST,
-      results: []
-    }
+      results: [],
+    };
   }
-  mounted() {
+  private mounted() {
     this.results = this.list;
+  }
+  private onSeachTextChanged(val: string) {
+    this.results = this.list.filter((i: ListItem) => {
+      return i.title.includes(val);
+    });
+  }
+   private onSeachTagChanged(val: string) {
+    this.results = this.list.filter((i: ListItem) => {
+      return i.features.includes(val);
+    });
   }
 }
 </script>
@@ -63,5 +67,9 @@ li {
 }
 a {
   color: #42b983;
+}
+.subtitle.results-count {
+  font-size: 12px;
+  color: #aaa;
 }
 </style>
