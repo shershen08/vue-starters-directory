@@ -12,6 +12,6 @@ declare global {
   }
 }
 
-declare type GlobalFetch {
+declare type GlobalFetch = {
   fetch(input: RequestInfo, init?: RequestInit): Promise<Response>;
 };

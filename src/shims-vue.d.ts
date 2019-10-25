@@ -3,6 +3,6 @@ declare module '*.vue' {
   export default Vue;
 }
 
-declare type GlobalFetch {
+declare type GlobalFetch = {
   fetch(input: RequestInfo, init?: RequestInit): Promise<Response>;
 };
