@@ -26,7 +26,7 @@ import SearchForm from './SearchForm.vue';
 export default class Search extends Vue {
   public list: ListItem[] = LIST;
   public labels: string[] = [];
-  public results!: ListItem[] = [];
+  public results: ListItem[] = [];
   private components = {
       SearchItem,
       SearchForm,
@@ -36,7 +36,6 @@ export default class Search extends Vue {
     this.list.forEach( (l) => {
       this.labels = this.labels.concat(l.features);
     });
-    //debugger
     this.labels = [...new Set(this.labels)];
   }
   private onSeachTextChanged(val: string) {

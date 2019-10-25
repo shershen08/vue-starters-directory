@@ -6,3 +6,9 @@ export interface ListItem {
     stars: number;
     features: string[];
 }
+
+
+export interface FilterItem {
+    name: string;
+    active: boolean;
+}

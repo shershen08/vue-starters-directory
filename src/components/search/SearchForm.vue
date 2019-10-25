@@ -5,15 +5,17 @@
          <button v-if="search != ''" type="button" @click="onClear" class="nes-btn is-primary">x</button>
         </div>
         <div class="list">
-            <button type="button" class="nes-btn is-success" @click="toggleFilters">filers</button>
-            <div v-show="showFilters" class="filters-container ">
-                <label v-for="(label, index) in labels" :key="index">
-                    <input type="checkbox" class="nes-checkbox" checked />
+            <button type="button" v-show="!showFilters" class="nes-btn" @click="toggleFilters">filters ({{activeFlags.length}}) </button>
+            <div v-show="showFilters" class="nes-container filters-container">
+                <button type="button" class="nes-btn" @click="toggleFilters">filters ({{activeFlags.length}})</button>
+                <br>
+                <br>
+                <label v-for="(label, index) in labels" :key="index" :class="{'active': activeFlags.includes(label)}">
+                    <input type="checkbox" class="nes-checkbox" v-model="activeFlags" :value="label"/>
                     <span>{{label}}</span>
                 </label>
             </div>
         </div>
-        
     </section>
 </template>
 <script lang="ts">
@@ -22,6 +24,7 @@ import { Component, Model, Prop, Vue, Watch, Emit } from 'vue-property-decorator
 @Component
 export class SearchForm extends Vue {
     public search: string = '';
+    public activeFlags: string[] = [];
     public showFilters: boolean = false;
     @Prop() private labels!: object;
     @Watch('search')
@@ -29,12 +32,17 @@ export class SearchForm extends Vue {
     private onSeachChanged(val: string, oldVal: string) {
         return val;
     }
+    @Emit('search:tag')
+    private onTagChanged(val: string[]) {
+        return val;
+    }
     private toggleFilters() {
-        this.showFilters = !this.showFilters
+        this.showFilters = !this.showFilters;
+        this.onTagChanged(this.activeFlags);
     }
     private onClear() {
         this.search = '';
-        this.$refs.searchInput.focus();
+        //this.$refs.searchInput.focus();
     }
 }
 export default SearchForm;
@@ -67,8 +75,15 @@ export default SearchForm;
     align-content: stretch;
     overflow: hidden;
 }
+label {
+    width: 100%;
+    &.active {
+    color: #42b983;
+}
+}
+
 .filters-container {
-        position: absolute;
+    position: absolute;
     background: #fff;
     z-index: 100;
 }

@@ -21,7 +21,7 @@
                         {{feature}}
                     </div>
                     <br>
-            Repo link: <a :href="details.repo" :title="details.repo">{{details.repo.replace('https://', '')}}</a>
+            Repo link: <a :href="details.repo" :title="details.repo" target="_blank">{{details.repo.replace('https://', '')}}</a>
         </section>
     </section>
 </template>

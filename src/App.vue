@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class='nes-container with-title'>
+  <div id="app" class='with-title'>
     <header @click="toSearch">
       <div>
         <img alt="Vue logo" src="./assets/logo.png">
@@ -34,7 +34,9 @@ export default App;
 </script>
 <style lang="scss">
 @import url(./assets/pixel-style.css);
-
+#app {
+      margin: 40px;
+}
 footer {
     height: 40px;
     width: 100%;
@@ -58,6 +60,7 @@ header {
       flex-shrink: 1;
       flex-basis: auto;
       align-self: auto;
+      padding-top: 50px;
     }
     div {
        width: 19%;
