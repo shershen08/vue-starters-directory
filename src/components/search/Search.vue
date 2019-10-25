@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <SearchForm @search:text="onSeachTextChanged"/>
+    <SearchForm @search:text="onSeachTextChanged" :labels="labels"/>
     <div class="results">
       <p class="subtitle results-count">{{results.length}} starters found</p>
       <SearchItem v-for="(result,index) in results" :key="index" :details="result" @search:tag="onSeachTagChanged"/>
@@ -25,19 +25,19 @@ import SearchForm from './SearchForm.vue';
 
 export default class Search extends Vue {
   public list: ListItem[] = LIST;
-  public results!: ListItem[];
+  public labels: string[] = [];
+  public results!: ListItem[] = [];
   private components = {
       SearchItem,
       SearchForm,
   };
-  private data() {
-    return {
-      list: LIST,
-      results: [],
-    };
-  }
   private mounted() {
     this.results = this.list;
+    this.list.forEach( (l) => {
+      this.labels = this.labels.concat(l.features);
+    });
+    //debugger
+    this.labels = [...new Set(this.labels)];
   }
   private onSeachTextChanged(val: string) {
     this.results = this.list.filter((i: ListItem) => {

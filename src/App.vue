@@ -13,7 +13,7 @@
       <router-link to="/">Search</router-link>
       <router-link to="/about">About</router-link>
     
-      <a href="https://github.com/shershen08/vue-starters-directory/blob/master/data/starters.ts">Contribute</a>
+      <a href="https://github.com/shershen08/vue-starters-directory/blob/master/data/starters.ts" target="_blank">Contribute</a>
       <a href="https://twitter.com/share?" class="twitter-share-button"  data-text="#vue starters directory - find best bootstrap you #vuejs project" data-show-count="true">Tweet</a>
     </div>
     </footer>
@@ -25,7 +25,9 @@ import { Component, Vue } from 'vue-property-decorator';
 @Component
 export class App extends Vue {
     private toSearch() {
-        this.$router.push('/');
+        if ( this.$router.currentRoute.fullPath !== '/') {
+          this.$router.push('/');
+        }
     }
 }
 export default App;

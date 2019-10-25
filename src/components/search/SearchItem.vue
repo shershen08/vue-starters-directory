@@ -3,23 +3,25 @@
         <section class="nes-btn basic-details" @click="onClick">
             <div class="title">
                 <h3>{{details.title}}</h3>
-                <div class="star-count"><i class="nes-icon is-large star"></i>{{details.stars}} </div>
-                <small>{{details.repo.replace('https://', '')}}</small>
+                <div class="star-count">
+                    <i class="nes-icon star"></i>{{details.stars}}
+                </div>
             </div>
         
             <div class="features-list">
-                    <div class="feature-item" v-for="(feature, index) in details.features" :key="index" @click="searchTag(feature)">
-                        {{feature}}
-                    </div>
+             
                 </div>
             <div class="link-details">
-                <i class="nes-icon arrow-down" v-if="opened"><</i>
-                <i class="nes-icon arrow-right" v-if="!opened">></i>
+                <i class="nes-icon arrow-down" v-if="opened">-</i>
+                <i class="nes-icon arrow-right" v-if="!opened">+</i>
             </div>
         </section>
         <section v-if="opened" class="nes-container showcase">
-            {{details}}
-            <a :href="details.repo" :title="details.repo">{{details.repo.replace('https://', '')}} >> </a>
+               Features: <div class="feature-item" v-for="(feature, index) in details.features" :key="index" @click="searchTag(feature)">
+                        {{feature}}
+                    </div>
+                    <br>
+            Repo link: <a :href="details.repo" :title="details.repo">{{details.repo.replace('https://', '')}}</a>
         </section>
     </section>
 </template>
@@ -28,11 +30,7 @@ import { Component, Prop, Vue, Emit } from 'vue-property-decorator';
 
 @Component
 export class SearchItem extends Vue {
-    private data() {
-        return {
-            opened: false,
-        };
-    }
+    private opened: boolean = false;
     @Prop() private details!: object;
     @Emit('search:tag')
     private searchTag(feature: string) {
@@ -78,8 +76,9 @@ export default SearchItem;
 }
 .star-count {
     color: #ffba3b;
-    i {
-        font-size: 10px;
+    font-size: 22px;
+    .nes-icon {
+        margin-right: 20px;
     }
 }
     h3 {
@@ -100,7 +99,7 @@ export default SearchItem;
         cursor: pointer;
         opacity: .7;
         font-size: 12px;
-        :hover {
+        &:hover {
             color: #42b983;
         }
     }

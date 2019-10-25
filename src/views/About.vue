@@ -6,9 +6,9 @@
  If you know a cool template or starter kit missing on this page -  please feel free to add it to the list bye heading into data/starters.ts file.
     </p>
     <br>
-   - CSS style from <a href="https://nostalgic-css.github.io/NES.css/">NES.css</a>
+   - CSS style from <a href="https://nostalgic-css.github.io/NES.css/" target="_blank">NES.css</a>
    <br>
-   - pixelated Vue logo from <a href="https://vuejsexamples.com/an-easy-way-to-draw-your-pixel-arts-and-get-the-css-code-generated-from-it/">vuejsexamples.com</a>
+   - pixelated Vue logo from <a href="https://vuejsexamples.com/an-easy-way-to-draw-your-pixel-arts-and-get-the-css-code-generated-from-it/" target="_blank">vuejsexamples.com</a>
   </div>
 </template>
 <style lang="scss">

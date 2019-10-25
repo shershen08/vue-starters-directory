@@ -4,10 +4,15 @@
         <div class="clear-button">
          <button v-if="search != ''" type="button" @click="onClear" class="nes-btn is-primary">x</button>
         </div>
-        <label v-for="(label, index) in labels" :key="index">
-            <input type="checkbox" class="nes-checkbox" checked />
-            <span>{{label}}</span>
-        </label>
+        <div class="list">
+            <button type="button" class="nes-btn is-success" @click="toggleFilters">filers</button>
+            <div v-show="showFilters" class="filters-container ">
+                <label v-for="(label, index) in labels" :key="index">
+                    <input type="checkbox" class="nes-checkbox" checked />
+                    <span>{{label}}</span>
+                </label>
+            </div>
+        </div>
         
     </section>
 </template>
@@ -16,20 +21,20 @@ import { Component, Model, Prop, Vue, Watch, Emit } from 'vue-property-decorator
 
 @Component
 export class SearchForm extends Vue {
-    private data() {
-        return {
-            search: '',
-            labels: ['router', 'vuex', 'typescript']
-        };
-    }
-    private onClear(){
-        this.search = '';
-        this.$refs.searchInput.focus();
-    }
+    public search: string = '';
+    public showFilters: boolean = false;
+    @Prop() private labels!: object;
     @Watch('search')
     @Emit('search:text')
     private onSeachChanged(val: string, oldVal: string) {
         return val;
+    }
+    private toggleFilters() {
+        this.showFilters = !this.showFilters
+    }
+    private onClear() {
+        this.search = '';
+        this.$refs.searchInput.focus();
     }
 }
 export default SearchForm;
@@ -50,6 +55,22 @@ export default SearchForm;
     flex-basis: auto;
     align-self: auto;
     text-align: left;
+}
+.list {
+      display: flex;
+      width: 30%;
+    margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    overflow: hidden;
+}
+.filters-container {
+        position: absolute;
+    background: #fff;
+    z-index: 100;
 }
 .search-box {
     display: flex;
