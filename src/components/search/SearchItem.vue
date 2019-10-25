@@ -26,11 +26,35 @@
     </section>
 </template>
 <script lang="ts">
+import gql from 'graphql-tag';
 import { Component, Prop, Vue, Emit } from 'vue-property-decorator';
 
 @Component
 export class SearchItem extends Vue {
+    private apollo = {
+        hello: gql`query {
+            repository(name:"Vue-Express-Mongo-Boilerplate", owner:"Icebob") {
+                pushedAt
+                shortDescriptionHTML
+                pullRequests(states:OPEN){
+                totalCount
+                }
+                issues(states:OPEN){
+                totalCount
+                }
+                languages(first:5) {
+                edges {
+                    node {
+                    color
+                    name
+                    }
+                }
+                }
+            }
+        }`,
+    };
     private opened: boolean = false;
+    private hello: any = {};
     @Prop() private details!: object;
     @Emit('search:tag')
     private searchTag(feature: string) {
@@ -69,6 +93,7 @@ export default SearchItem;
 }
 .link-details {
     order: 0;
+    width: 50px;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;

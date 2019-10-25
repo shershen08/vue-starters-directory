@@ -40,7 +40,7 @@ export default class Search extends Vue {
   }
   private onSeachTextChanged(val: string) {
     this.results = this.list.filter((i: ListItem) => {
-      return i.title.includes(val);
+      return i.title.toLowerCase().includes(val.toLowerCase());
     });
   }
    private onSeachTagChanged(val: string) {

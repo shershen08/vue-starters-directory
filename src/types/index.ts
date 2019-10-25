@@ -12,3 +12,7 @@ export interface FilterItem {
     name: string;
     active: boolean;
 }
+
+export interface GlobalFetch {
+    fetch(input: RequestInfo, init?: RequestInit): Promise<Response>;
+  }

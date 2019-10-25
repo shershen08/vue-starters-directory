@@ -2,18 +2,20 @@
     <section class="search-box">
         <input id="tags" v-model="search" ref="searchInput" class="search-input">
         <div class="clear-button">
-         <button v-if="search != ''" type="button" @click="onClear" class="nes-btn is-primary">x</button>
+         <button v-if="search != ''" type="button" @click="onClear" class="nes-btn">x</button>
         </div>
         <div class="list">
             <button type="button" v-show="!showFilters" class="nes-btn" @click="toggleFilters">filters ({{activeFlags.length}}) </button>
-            <div v-show="showFilters" class="nes-container filters-container">
-                <button type="button" class="nes-btn" @click="toggleFilters">filters ({{activeFlags.length}})</button>
-                <br>
-                <br>
-                <label v-for="(label, index) in labels" :key="index" :class="{'active': activeFlags.includes(label)}">
-                    <input type="checkbox" class="nes-checkbox" v-model="activeFlags" :value="label"/>
-                    <span>{{label}}</span>
-                </label>
+            <div v-show="showFilters" class="filters-container">
+                <div class="wrapper nes-container ">
+                    <button type="button" class="nes-btn" @click="toggleFilters">filters ({{activeFlags.length}})</button>
+                    <br>
+                    <br>
+                    <label v-for="(label, index) in labels" :key="index" :class="{'active': activeFlags.includes(label)}">
+                        <input type="checkbox" class="nes-checkbox" v-model="activeFlags" :value="label"/>
+                        <span>{{label}}</span>
+                    </label>
+                </div>
             </div>
         </div>
     </section>
@@ -42,7 +44,7 @@ export class SearchForm extends Vue {
     }
     private onClear() {
         this.search = '';
-        //this.$refs.searchInput.focus();
+        // this.$refs.searchInput.focus();
     }
 }
 export default SearchForm;
@@ -73,19 +75,24 @@ export default SearchForm;
     justify-content: space-between;
     align-items: stretch;
     align-content: stretch;
-    overflow: hidden;
 }
 label {
     width: 100%;
-    &.active {
-    color: #42b983;
-}
+        &.active {
+        color: #42b983;
+    }
 }
 
 .filters-container {
-    position: absolute;
-    background: #fff;
+    position: relative;
     z-index: 100;
+    top: -30px;
+    left: -40px;
+    .wrapper {
+        position:absolute;
+        background: #fff;
+        min-width: 290px;
+    }
 }
 .search-box {
     display: flex;
