@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-    <section>
-      <Search/>
-    </section>
+    <Search/>
   </div>
 </template>
 
@@ -18,7 +16,4 @@ import Search from '@/components/search/Search.vue'; // @ is an alias to /src
 export default class Home extends Vue {}
 </script>
 <style lang="scss" scoped>
-  section {
-    clear: both;
-  }
 </style>

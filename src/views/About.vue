@@ -5,7 +5,10 @@
   </p><p>
  If you know a cool template or starter kit missing on this page -  please feel free to add it to the list bye heading into data/starters.ts file.
     </p>
-    CSS style from <a href="https://codepen.io/chrispper1989/pen/xxxgJoR">chrispper1989's codepen</a>
+    <br>
+   - CSS style from <a href="https://codepen.io/chrispper1989/pen/xxxgJoR">chrispper1989's codepen</a>
+   <br>
+   - pixelated Vue logo from <a href="https://vuejsexamples.com/an-easy-way-to-draw-your-pixel-arts-and-get-the-css-code-generated-from-it/">vuejsexamples.com</a>
   </div>
 </template>
 <style lang="scss">

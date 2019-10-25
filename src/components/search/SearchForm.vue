@@ -1,6 +1,6 @@
 <template>
     <section>
-        <input v-model="search" class="search-input">
+        <input id="tags" v-model="search" class="search-input">
     </section>
 </template>
 <script lang="ts">

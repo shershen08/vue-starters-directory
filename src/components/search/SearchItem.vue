@@ -1,13 +1,18 @@
 <template>
-    <section>
-        <h3>{{details.title}}</h3>
-        <div class="other-details">
-            ⭐️{{details.stars}} | <a :href="details.repo">🔗{{details.repo.replace('https://', '')}}</a>
-            <div class="features-list">
+    <section class="nes-btn">
+        <div class="title">
+             <h3>{{details.title}}</h3>
+              <div class="star-count">⭐️{{details.stars}} </div>
+              <small>{{details.repo.replace('https://', '')}}</small>
+        </div>
+    
+          <div class="features-list">
                 <div class="feature-item" v-for="(feature, index) in details.features" :key="index" @click="searchTag(feature)">
                     {{feature}}
                 </div>
             </div>
+        <div class="link-details">
+           <a :href="details.repo" :title="details.repo">>></a>
         </div>
     </section>
 </template>
@@ -26,8 +31,38 @@ export default SearchItem;
 </script>
 <style scoped lang="scss">
 section {
-    width: 80%;
+    display: flex;
     margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+}
+.title {
+    order: 0;
+    flex-grow: 12;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    text-align: left;
+}
+.features-list {
+    order: 0;
+    flex-grow: 8;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+}
+.link-details {
+    order: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+}
+.star-count {
+    color: #ffba3b;
 }
     h3 {
         margin-bottom: 5px;

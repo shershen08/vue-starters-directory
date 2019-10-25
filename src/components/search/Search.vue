@@ -71,5 +71,6 @@ a {
 .subtitle.results-count {
   font-size: 12px;
   color: #aaa;
+  margin-top: 10px;
 }
 </style>

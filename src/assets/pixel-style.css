@@ -1,0 +1,184 @@
+/* tangerine font */
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+html, body, pre, code, kbd, samp {
+          font-family: "Press Start 2P",	"Kongtext", "Helvetica";
+   text-transform: capitalize;
+   -webkit-font-smoothing: antialiased;
+      }
+img {
+  image-rendering: pixelated;
+}
+
+.tip
+{
+  text-transform: none;
+  font-style:italic;
+}
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(4); /* IE */
+  -moz-transform: scale(4); /* FF */
+  -webkit-transform: scale(4); /* Safari and Chrome */
+  -o-transform: scale(4); /* Opera */
+  transform: scale(4);
+  
+}
+
+.container
+{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.row-container
+{
+  flex-direction: row !important;
+}
+.row {
+  flex-basis: auto;
+  display: flex;
+   flex-direction: row;
+  flex-wrap: nowrap;
+}
+p {
+    font-size: 16px;
+    font-size: 0.7em !important;
+
+}
+.title
+{
+  text-align: center;
+}
+.card
+{    
+  text-align: center;
+  display: flex;
+  width:200px !important;
+  height:250px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right:-5px;
+  padding: 5px;
+  border: 10px solid rgba(255, 255, 255, .2);
+
+}
+img
+{  
+  margin:auto;
+}
+
+
+#mainbutton
+{
+
+  width:100%;
+}
+h3
+{
+  margin-left:5px;
+}
+.grey .card
+{
+  background-color:#212529;    
+}
+.grey .title
+{
+  background-color:#212529 !important;    
+}
+.blue  {
+  /* Properties */
+ background-color:#42b983 ;
+    color:white;   
+}  
+.red  {
+  /* Properties */
+ 
+  background-color:#FF4136;
+    color:white;   
+}  
+.red .title
+{
+  background-color:#FF4136 !important;    
+}
+.blue .title
+{
+  background-color:#42b983 !important;    
+}
+.blue .card {
+  /* Properties */
+     color:white;  
+}  
+.focused, li:hover, li:focus, a:hover {
+  background-color: black;
+  color: white;
+}
+
+
+#tags {
+            text-transform: capitalize;
+            background-color:white;
+            opacity:0.9;
+            font-weight: bold;
+            border-color: #2e2e2e;
+            border-style: solid;
+            border-width: 2px 2px 2px 2px;
+            outline: none;
+            padding: 10px 20px 10px 20px;
+            width: 250px;
+            width:100%;
+        }
+      /*Css to target the dropdownbox*/
+        ul.ui-autocomplete {            
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+            border-color:black;
+          color:white;
+           
+          text-transform: capitalize;
+          
+          background-color:#DDDDDD;
+          color:black;
+          font-size: 15px;
+          style:flat;  
+          margin:5px;
+          padding: 10px 30px;
+          border: 0;
+          box-shadow: none;
+          
+        }
+ul.ui-autocomplete::hover { color: red; }
+
+.ui-menu-item::select { 
+  color: red;
+}
+
+
+.ui-menu-item
+{
+  list-style-type: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .row {
+  flex-basis: auto;
+  display: flex;
+   flex-direction: column;
+  flex-wrap: nowrap;
+}
+ 
+  
+  .container
+  {
+    flex-basis: auto;
+  display: flex;
+   flex-direction: row;
+  flex-wrap: nowrap;
+    
+  }
+}
+
