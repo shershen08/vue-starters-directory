@@ -31,8 +31,7 @@ import { Component, Prop, Vue, Emit } from 'vue-property-decorator';
 
 @Component
 export class SearchItem extends Vue {
-    private apollo = {
-        hello: gql`query {
+    private repoDetails = gql`query {
             repository(name:"Vue-Express-Mongo-Boilerplate", owner:"Icebob") {
                 pushedAt
                 shortDescriptionHTML
@@ -51,8 +50,7 @@ export class SearchItem extends Vue {
                 }
                 }
             }
-        }`,
-    };
+        }`;
     private opened: boolean = false;
     private hello: any = {};
     @Prop() private details!: object;
@@ -60,8 +58,15 @@ export class SearchItem extends Vue {
     private searchTag(feature: string) {
         return feature;
     }
-    private onClick() {
+    private async onClick() {
         this.opened = ! this.opened;
+        debugger;
+        await this.$apollo.query({
+                    query: this.repoDetails,
+                    variables() {
+                    return {}
+                }
+            })
     }
 }
 export default SearchItem;

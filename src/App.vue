@@ -4,7 +4,7 @@
       <div>
         <img alt="Vue logo" src="./assets/logo.png">
       </div>
-      <h1>Starters<br>directory</h1>
+      <h1>Vue<br>Starters<br>directory</h1>
     </header>
     <router-view/>
     <footer>
