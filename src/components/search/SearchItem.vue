@@ -1,19 +1,20 @@
 <template>
     <section>
-        <section class="nes-btn basic-details" @click="onClick">
-            <div class="title">
-                <h3>{{details.title}}</h3>
+        <section class="nes-btn top-block" @click="onClick">
+            <div class="basic-details">
+                <div class="title">
+                    <h3>{{details.title}}</h3>
+                </div>
+                <div class="link-details">
+                    <i class="nes-icon arrow-down" v-if="opened">-</i>
+                    <i class="nes-icon arrow-right" v-if="!opened">+</i>
+                </div>
+            </div>
+            <div class="top-details">
                 <div class="star-count">
                     <i class="nes-icon star"></i>{{details.stars}}
                 </div>
-            </div>
-        
-            <div class="features-list">
-             
-                </div>
-            <div class="link-details">
-                <i class="nes-icon arrow-down" v-if="opened">-</i>
-                <i class="nes-icon arrow-right" v-if="!opened">+</i>
+                <p>{{details.desc}}</p>
             </div>
         </section>
         <section v-if="opened" class="nes-container showcase">
@@ -75,15 +76,26 @@ export class SearchItem extends Vue {
 export default SearchItem;
 </script>
 <style scoped lang="scss">
-.basic-details {
+.top-block {
     display: flex;
     margin: 0 auto;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: stretch;
     align-content: stretch;
 }
+.basic-details {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+}
+
 .title {
     order: 0;
     flex-grow: 12;
@@ -99,6 +111,40 @@ export default SearchItem;
     flex-basis: auto;
     align-self: auto;
 }
+.top-details {
+    justify-content: flex-start;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    p {
+        text-align: left;
+        color: #999;
+        width: 90%;
+        flex-basis: auto;
+        align-self: auto;
+        flex-grow: 4;
+    }
+
+    @media only screen and (max-device-width : 768px) {
+          p {
+              display: none;
+          }
+    }
+}
+.star-count {
+    color: #ffba3b;
+    font-size: 22px;
+    flex-grow: 4;
+    min-width: 170px;
+    flex-basis: auto;
+    align-self: auto;
+    text-align: left;
+    .nes-icon {
+        margin-right: 20px;
+    }
+}
 .link-details {
     order: 0;
     width: 50px;
@@ -107,13 +153,7 @@ export default SearchItem;
     flex-basis: auto;
     align-self: auto;
 }
-.star-count {
-    color: #ffba3b;
-    font-size: 22px;
-    .nes-icon {
-        margin-right: 20px;
-    }
-}
+
     h3 {
         margin-bottom: 5px;
     }

@@ -4,15 +4,10 @@ export interface ListItem {
     title: string;
     repo: string;
     link: string;
+    desc: string;
     owner: string;
     stars: number;
     features: string[];
-}
-
-
-export interface FilterItem {
-    name: string;
-    active: boolean;
 }
 
 export interface SearchState {

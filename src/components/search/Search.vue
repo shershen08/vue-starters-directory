@@ -16,6 +16,13 @@ import LIST from './../../../data/starters';
 import SearchItem from './SearchItem.vue';
 import SearchForm from './SearchForm.vue';
 
+const sortByStars = (a: ListItem, b: ListItem): number => {
+    if (a.stars === b.stars) {
+      return 1;
+    }
+    return a.stars > b.stars ? -1 : 1;
+  };
+
 @Component({
         name: 'Search',
         components: {
@@ -38,7 +45,7 @@ export default class Search extends Vue {
       SearchForm,
   };
   private mounted() {
-    this.results = this.list;
+    this.results = this.list.sort(sortByStars);
     this.list.forEach( (l) => {
       this.labels = this.labels.concat(l.features);
     });
@@ -49,7 +56,7 @@ export default class Search extends Vue {
     this.searched = true;
     this.applySearchFilters();
   }
-   private onSeachTagChanged(val: string[]) {
+  private onSeachTagChanged(val: string[]) {
     this.searchState.tags = val;
     this.searched = true;
     this.applySearchFilters();
@@ -68,7 +75,7 @@ export default class Search extends Vue {
         }
       });
       return hasAllSelectedTags;
-    });
+    }).sort(sortByStars);
   }
 }
 </script>

@@ -1,8 +1,8 @@
 <template>
     <section class="search-box">
-        <input id="tags" v-model="search" ref="searchInput" class="search-input" placeholder="type something">
+        <input id="tags" v-model="search" ref="searchInput" class="search-input nes-input" placeholder="type something">
         <div class="clear-button">
-         <button v-if="search != ''" type="button" @click="onClear" class="nes-btn">x</button>
+         <button v-if="search != ''" type="button" @click="onClear" title="Clear filters" class="nes-btn">x</button>
         </div>
         <div class="list">
             <button type="button" v-show="!showFilters" class="nes-btn filter-button" @click="toggleFilters">filters ({{activeFlags.length}}) </button>
@@ -57,10 +57,8 @@ export default SearchForm;
     min-width: 6%;
 }
 .search-input {
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    // font-size: 20px;
+    // padding: 10px;
     order: 0;
     flex-grow: 12;
     flex-shrink: 1;
