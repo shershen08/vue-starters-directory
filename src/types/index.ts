@@ -3,6 +3,8 @@ export interface ListItem {
     published: boolean;
     title: string;
     repo: string;
+    link: string;
+    owner: string;
     stars: number;
     features: string[];
 }
@@ -13,6 +15,7 @@ export interface FilterItem {
     active: boolean;
 }
 
-export interface GlobalFetch {
-    fetch(input: RequestInfo, init?: RequestInit): Promise<Response>;
-  }
+export interface SearchState {
+    text: string;
+    tags: string[];
+}

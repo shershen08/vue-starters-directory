@@ -1,14 +1,14 @@
 <template>
     <section class="search-box">
-        <input id="tags" v-model="search" ref="searchInput" class="search-input">
+        <input id="tags" v-model="search" ref="searchInput" class="search-input" placeholder="type something">
         <div class="clear-button">
          <button v-if="search != ''" type="button" @click="onClear" class="nes-btn">x</button>
         </div>
         <div class="list">
-            <button type="button" v-show="!showFilters" class="nes-btn" @click="toggleFilters">filters ({{activeFlags.length}}) </button>
+            <button type="button" v-show="!showFilters" class="nes-btn filter-button" @click="toggleFilters">filters ({{activeFlags.length}}) </button>
             <div v-show="showFilters" class="filters-container">
                 <div class="wrapper nes-container ">
-                    <button type="button" class="nes-btn" @click="toggleFilters">filters ({{activeFlags.length}})</button>
+                    <button type="button" class="nes-btn filter-button" @click="toggleFilters">filters ({{activeFlags.length}})</button>
                     <br>
                     <br>
                     <label v-for="(label, index) in labels" :key="index" :class="{'active': activeFlags.includes(label)}">
@@ -34,6 +34,7 @@ export class SearchForm extends Vue {
     private onSeachChanged(val: string, oldVal: string) {
         return val;
     }
+    @Watch('activeFlags')
     @Emit('search:tag')
     private onTagChanged(val: string[]) {
         return val;
@@ -44,6 +45,7 @@ export class SearchForm extends Vue {
     }
     private onClear() {
         this.search = '';
+        // TODO, how to focus in TS ?
         // this.$refs.searchInput.focus();
     }
 }
@@ -82,11 +84,10 @@ label {
         color: #42b983;
     }
 }
-
 .filters-container {
     position: relative;
     z-index: 100;
-    top: -30px;
+    top: -25px;
     left: -40px;
     .wrapper {
         position:absolute;
@@ -102,5 +103,17 @@ label {
     justify-content: space-between;
     align-items: stretch;
     align-content: stretch;
+}
+@media only screen and (max-device-width : 768px) {
+    .filter-button {
+        font-size: .5em;
+    }
+    .filters-container {
+        position: absolute;
+        z-index: 100;
+        top: 110px;
+        left: 30px;
+        width: calc( 100% - 60px);
+    }
 }
 </style>

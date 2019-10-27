@@ -7,7 +7,6 @@ import apolloProvider from './graphql';
 
 Vue.config.productionTip = false;
 
-// Vue.use(VueHotkey);
 Vue.use(VueApollo);
 
 new Vue({

@@ -1,15 +1,16 @@
 <template>
   <div class="wrapper">
-    <SearchForm @search:text="onSeachTextChanged" :labels="labels"/>
+    <SearchForm @search:text="onSeachTextChanged" @search:tag="onSeachTagChanged" :labels="labels"/>
     <div class="results">
-      <p class="subtitle results-count">{{results.length}} starters found</p>
+      <p class="subtitle results-count" v-if="!searched">{{results.length}} starters available</p>
+      <p class="subtitle results-count" v-else>{{results.length}} starters found</p>
       <SearchItem v-for="(result,index) in results" :key="index" :details="result" @search:tag="onSeachTagChanged"/>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { ListItem } from '@/types/index';
+import { ListItem, SearchState } from '@/types/index';
 import { Component, Prop, Model, Provide, Watch, Vue } from 'vue-property-decorator';
 import LIST from './../../../data/starters';
 import SearchItem from './SearchItem.vue';
@@ -27,6 +28,11 @@ export default class Search extends Vue {
   public list: ListItem[] = LIST;
   public labels: string[] = [];
   public results: ListItem[] = [];
+  public searched: boolean = false;
+  public searchState: SearchState = {
+    text: '',
+    tags: [],
+  };
   private components = {
       SearchItem,
       SearchForm,
@@ -39,13 +45,29 @@ export default class Search extends Vue {
     this.labels = [...new Set(this.labels)];
   }
   private onSeachTextChanged(val: string) {
-    this.results = this.list.filter((i: ListItem) => {
-      return i.title.toLowerCase().includes(val.toLowerCase());
-    });
+    this.searchState.text = val;
+    this.searched = true;
+    this.applySearchFilters();
   }
-   private onSeachTagChanged(val: string) {
+   private onSeachTagChanged(val: string[]) {
+    this.searchState.tags = val;
+    this.searched = true;
+    this.applySearchFilters();
+  }
+  private applySearchFilters() {
     this.results = this.list.filter((i: ListItem) => {
-      return i.features.includes(val);
+      return i.title.toLowerCase().includes(this.searchState.text.toLowerCase());
+    }).filter((i: ListItem) => {
+      if (this.searchState.tags.length === 0) {
+        return true;
+      }
+      let hasAllSelectedTags = true;
+      this.searchState.tags.forEach((tag) => {
+        if (!i.features.includes(tag)) {
+          hasAllSelectedTags = false;
+        }
+      });
+      return hasAllSelectedTags;
     });
   }
 }

@@ -42,6 +42,13 @@ footer {
     width: 100%;
     text-align: center;
     margin-top: 40px;
+    @media only screen and (max-device-width : 768px) {
+      #nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
 }
 .nes-btn {
   user-select: auto !important;
@@ -60,7 +67,10 @@ header {
       flex-shrink: 1;
       flex-basis: auto;
       align-self: auto;
-      padding-top: 50px;
+      @media only screen and (max-device-width : 768px) {
+        width: auto;
+        font-size: 1em;
+      }
     }
     div {
        width: 19%;
@@ -71,11 +81,21 @@ header {
       align-self: auto;
       img {
             width: 100%;
+            max-width: 200px;
       }
     }
 }
- a {
-    color: #42b983;
-    margin: 10px;
+
+
+a {
+  color: #42b983;
+  margin: 10px;
+}
+
+@media only screen and (max-device-width : 768px) {
+  .nes-container {
+      padding: .5em;
+      font-size: 70%;
   }
+}
 </style>
