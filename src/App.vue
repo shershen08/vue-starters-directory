@@ -6,7 +6,10 @@
       </div>
       <h1>Vue<br>Starters<br>directory</h1>
     </header>
+    <p class="sub-text">Vue starter kits, also known as boilerplate projects or seed projects. Aimed to quickly start a project with preconfigured setup.</p>
     <router-view/>
+    <br>
+     <p class="sub-text">To get started with any of those - just follow the link, clone the repo and go on with builing your project on top of it!</p>
     <footer>
       <div id="nav">
         <span>v.0.3.0</span>
@@ -84,6 +87,10 @@ header {
             max-width: 200px;
       }
     }
+}
+.sub-text {
+    text-align: center;
+    color: #666;
 }
 
 

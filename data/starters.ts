@@ -41,12 +41,12 @@ const list: ListItem[] = [
         title: 'vue-express-mongo-boilerplate',
         stars: 2300,
         published: true,
-        desc:'MEVN Full stack JS web app boilerplate with NodeJS, Express, Mongo and VueJS ',
+        desc: 'MEVN Full stack JS web app boilerplate with NodeJS, Express, Mongo and VueJS ',
         repo: 'vue-express-mongo-boilerplate',
         owner: 'icebob',
         link: 'https://github.com/icebob/vue-express-mongo-boilerplate',
         features: [
-            'express', 'mongo', 'axios', 'apollo',
+            'express', 'mongo', 'axios', 'apollo-client',
             'router', 'axios', 'jade', 'vuex',
         ],
     },
@@ -107,7 +107,7 @@ const list: ListItem[] = [
         owner: 'mcongy',
         link: 'https://github.com/mcongy/friendly-vue-starter',
         features: [
-            'vuex', 'vue-router', 'apollo-client', 'eslint', 'critical', 'vue-property-decorator',
+            'vuex', 'vue-router', 'apollo-client', 'eslint', 'vue-property-decorator',
         ],
     },
     {
@@ -168,6 +168,30 @@ const list: ListItem[] = [
         link: 'https://github.com/TrilonIO/aspnetcore-Vue-starter',
         features: [
             'vue-router',  'vuex', 'webpack4.x', 'axios', 'eslint', 'fortawesome', 'ssr',
+        ],
+    },
+    {
+        title: 'pevn-starter',
+        desc: 'A basic example of how to use VueJS, Express and PostgreSQL in conjunction.',
+        stars: 40,
+        published: true,
+        repo: 'pevn-starter',
+        owner: 'jesalg',
+        link: 'https://github.com/jesalg/pevn-starter',
+        features: [
+            'webpack3.x', 'express', 'jade',
+        ],
+    },
+    {
+        title: 'laqul',
+        desc: 'A complete starter kit that allows you create amazing apps that look native thanks to the Quasar Framework. Powered by an API developed in Laravel Framework using the easy GraphQL queries language. And ready to use the Google Firebase features.',
+        stars: 40,
+        published: true,
+        repo: 'laqul',
+        owner: 'laqul',
+        link: 'https://github.com/laqul/laqul',
+        features: [
+            'i18n', 'axios', 'eslint', 'quasar', 'apollo-client'
         ],
     },
 ];
