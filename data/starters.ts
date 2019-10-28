@@ -46,8 +46,8 @@ const list: ListItem[] = [
         owner: 'icebob',
         link: 'https://github.com/icebob/vue-express-mongo-boilerplate',
         features: [
-            'express', 'mongo', 'backend', 'axios', 'apollo', 'graphql',
-            'router', 'axios', 'jade', 'vuex', 'passportjs',
+            'express', 'mongo', 'axios', 'apollo',
+            'router', 'axios', 'jade', 'vuex',
         ],
     },
     {
@@ -96,6 +96,78 @@ const list: ListItem[] = [
         link: 'https://github.com/madlabsinc/mevn-cli',
         features: [
             'eslint', 'prettier', 'jest', 'vuepress', 'express',
+        ],
+    },
+    {
+        title: 'friendly-vue-starter',
+        desc: 'Full featured Vue.js starter project for browser apps',
+        stars: 35,
+        published: true,
+        repo: 'friendly-vue-starter',
+        owner: 'mcongy',
+        link: 'https://github.com/mcongy/friendly-vue-starter',
+        features: [
+            'vuex', 'vue-router', 'apollo-client', 'eslint', 'critical', 'vue-property-decorator',
+        ],
+    },
+    {
+        title: 'vuepack',
+        desc: 'A modern starter which uses Vue 2, Vuex, Vue-router and Webpack 2 (and even Electron)',
+        stars: 2400,
+        published: true,
+        repo: 'vuepack',
+        owner: 'egoist',
+        link: 'https://github.com/egoist/vuepack',
+        features: [
+            'vuex', 'vue-router', 'TestCafe', 'electron', 'eslint', 'webpack2.x',
+        ],
+    },
+    {
+        title: 'spa-starter-kit',
+        desc: 'A highly opinionated starter kit for building Single Page Applications with Laravel and Vue.js',
+        stars: 926,
+        published: true,
+        repo: 'spa-starter-kit',
+        owner: 'codecasts',
+        link: 'https://github.com/codecasts/spa-starter-kit',
+        features: [
+            'vuex', 'vue-router', 'element-ui', 'axios', 'eslint', 'karma', 'Laravel', 'jwt',
+        ],
+    },
+    {
+        title: 'vuejs-wordpress-theme-starter',
+        desc: 'A WordPress theme with the guts ripped out and replaced with Vue. ',
+        stars: 960,
+        published: true,
+        repo: 'vuejs-wordpress-theme-starter',
+        owner: 'EvanAgee',
+        link: 'https://github.com/EvanAgee/vuejs-wordpress-theme-starter',
+        features: [
+            'vuex', 'vue-router',  'axios',
+        ],
+    },
+    {
+        title: 'node-vue-template',
+        desc: 'A starter template for building complete application using Node.js and Vue.js with some included packages and configurations to help start the development quickly.',
+        stars: 45,
+        published: true,
+        repo: 'vuejs-wordpress-theme-starter',
+        owner: 'mubaidr',
+        link: 'https://github.com/mubaidr/node-vue-template',
+        features: [
+            'vue-router',  'eslint', 'webpack4.x', 'bootswatch',
+        ],
+    },
+    {
+        title: 'aspnetcore-Vue-starter',
+        desc: '*NEW* Asp.net Core & Vue.js (ES6) SPA Starter kit - Vuex, webpack, Web API, Docker, and more',
+        stars: 1100,
+        published: true,
+        repo: 'aspnetcore-Vue-starter',
+        owner: 'TrilonIO',
+        link: 'https://github.com/TrilonIO/aspnetcore-Vue-starter',
+        features: [
+            'vue-router',  'vuex', 'webpack4.x', 'axios', 'eslint', 'fortawesome', 'ssr',
         ],
     },
 ];

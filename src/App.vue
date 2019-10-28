@@ -9,7 +9,7 @@
     <router-view/>
     <footer>
       <div id="nav">
-        <span>v.0.2.0</span>
+        <span>v.0.3.0</span>
       <router-link to="/">Search</router-link>
       <router-link to="/about">About</router-link>
     
