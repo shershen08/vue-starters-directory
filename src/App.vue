@@ -9,7 +9,7 @@
     <p class="sub-text">Vue starter kits, also known as boilerplate projects or seed projects. Aimed to quickly start a project with preconfigured setup.</p>
     <router-view/>
     <br>
-     <p class="sub-text">To get started with any of those - just follow the link, clone the repo and go on with builing your project on top of it!</p>
+     <p class="sub-text">To get started with any of those -  follow the link and clone the repo, if it's a template, use 'vue init TEMPLATE_NAME'.</p>
     <footer>
       <div id="nav">
         <span>v.0.3.0</span>

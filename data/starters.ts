@@ -194,6 +194,66 @@ const list: ListItem[] = [
             'i18n', 'axios', 'eslint', 'quasar', 'apollo-client'
         ],
     },
+    {
+        title: 'wemake-vue-template',
+        desc: 'Bleeding edge vue template focused on code quality and developer happiness',
+        stars: 396,
+        published: true,
+        repo: 'wemake-vue-template',
+        owner: 'wemake-services',
+        link: 'https://github.com/wemake-services/wemake-vue-template',
+        features: [
+            'jest', 'eslint', 'nuxt', 'axios', 'typescript', 'vuex', 
+        ],
+    },
+    {
+        title: 'vuecharged-template',
+        desc: 'A highly opinionated Vue 2.0 template',
+        stars: 14,
+        published: true,
+        repo: 'vuecharged-template',
+        owner: 'mrboomer',
+        link: 'https://github.com/mrboomer/vuecharged-template',
+        features: [
+            'jest', 'eslint', 'vuex', 'vue-router', 'i18n', 'webpack3.x',
+        ],
+    },
+    {
+        title: 'vue-django',
+        desc: '@django integrated with a full-featured @webpack + (@vuejs / vue-loader) setup with hot reload, linting, testing & css extraction.',
+        stars: 414,
+        published: true,
+        repo: 'vue-django',
+        owner: 'NdagiStanley',
+        link: 'https://github.com/NdagiStanley/vue-django',
+        features: [
+            'jest', 'eslint', 'vue-router', 'webpack3.x',
+        ],
+    },
+    {
+        title: 'awesome-vue-boilerplate',
+        desc: '😍 Awesome Vue Boilerplate 🥳 Vue 🥰 Vuex, vuex-pathify 🤗 element-ui 🤲 tailwindcss',
+        stars: 25,
+        published: true,
+        repo: 'awesome-vue-boilerplate',
+        owner: 'NarHakobyan',
+        link: 'https://github.com/NarHakobyan/awesome-vue-boilerplate',
+        features: [
+            'eslint', 'vue-router', 'i18n',  'vuex', 'vee-validate', 'webpack3.x', 'element-ui', 'vuepress',
+        ],
+    },
+    {
+        title: 'vue-auth-boilerplate',
+        desc: 'This is a simple Vue template/starter kit, scaffolded on vue-cli 3, with full Auth functions to Login & Register',
+        stars: 27,
+        published: true,
+        repo: 'vue-auth-boilerplate',
+        owner: 'VPetar',
+        link: 'https://github.com/VPetar/vue-auth-boilerplate',
+        features: [
+            'eslint', 'vue-router', 'axios',  'vuex',
+        ],
+    },
 ];
 
 export default list;

@@ -1,6 +1,6 @@
 <template>
     <section class="search-box">
-        <input id="tags" v-model="search" ref="searchInput" class="search-input nes-input" placeholder="type something">
+        <input id="tags" v-model="search" ref="searchInput" @input="updateSearch($event.target.value)" class="search-input nes-input" placeholder="_">
         <div class="clear-button">
          <button v-if="search != ''" type="button" @click="onClear" title="Clear filters" class="nes-btn">x</button>
         </div>
@@ -38,6 +38,9 @@ export class SearchForm extends Vue {
     @Emit('search:tag')
     private onTagChanged(val: string[]) {
         return val;
+    }
+    private updateSearch(val: string) {
+        this.search = val;
     }
     private toggleFilters() {
         this.showFilters = !this.showFilters;
@@ -112,6 +115,9 @@ label {
         top: 110px;
         left: 30px;
         width: calc( 100% - 60px);
+    }
+    .clear-button{
+        min-width: 15%;
     }
 }
 </style>
