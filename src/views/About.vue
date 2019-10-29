@@ -6,10 +6,13 @@
  If you know a cool template or starter kit for Vue that missing on this page -  please feel free to add it to the list by adding it to `data/starters.ts` file.
     </p>
     <p>
+      Resources used:
     <ul>
       <li>CSS style by <a href="https://nostalgic-css.github.io/NES.css/" target="_blank">NES.css</a></li>
       <li>pixelated Vue logo from <a href="https://vuejsexamples.com/an-easy-way-to-draw-your-pixel-arts-and-get-the-css-code-generated-from-it/" target="_blank">vuejsexamples.com</a></li>
     </ul>
+
+    Have ideas - shoot me a message on Twitter: <a href="https://twitter.com/legkoletat">@legkoletat</a>
     </p>
   </div>
 </template>

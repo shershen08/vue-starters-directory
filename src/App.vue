@@ -17,7 +17,7 @@
       <router-link to="/about">About</router-link>
     
       <a href="https://github.com/shershen08/vue-starters-directory/blob/master/data/starters.ts" target="_blank">Contribute</a>
-      <a href="https://twitter.com/share?" class="twitter-share-button"  data-text="#vue starters directory - find best bootstrap you #vuejs project" data-show-count="true">Tweet</a>
+      <a href="https://twitter.com/share?" class="twitter-share-button"  data-text="#vue starters directory - find best scaffold for your #vuejs project" data-show-count="true">Tweet</a>
     </div>
     </footer>
   </div>
