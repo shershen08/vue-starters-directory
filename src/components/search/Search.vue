@@ -46,18 +46,20 @@ export default class Search extends Vue {
   };
   private mounted() {
     this.results = this.list.sort(sortByStars);
-    let list:string[] = [];
-    let tmpMap:any = {};
+    let list: string[] = [];
+    const tmpMap: any = {};
     this.list.forEach( (l) => {
       list = list.concat(l.features).sort();
     });
-    list.forEach((label:string) => {
-      tmpMap[label] = tmpMap[label] ? tmpMap[label] + 1 : 1
-    })
-    this.labels = Object.entries(tmpMap).sort((a:any, b:any ) => {
-      if(a[1] === b[1]) return 1;
+    list.forEach((label: string) => {
+      tmpMap[label] = tmpMap[label] ? tmpMap[label] + 1 : 1;
+    });
+    this.labels = Object.entries(tmpMap).sort((a: any, b: any ) => {
+      if (a[1] === b[1]) {
+        return 1;
+      }
       return a[1] > b[1] ? -1 : 1;
-    }).map(i => i[0]);
+    }).map((i) => i[0]);
   }
   private onSeachTextChanged(val: string) {
     this.searchState.text = val;

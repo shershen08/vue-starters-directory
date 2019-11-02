@@ -191,7 +191,7 @@ const list: ListItem[] = [
         owner: 'laqul',
         link: 'https://github.com/laqul/laqul',
         features: [
-            'i18n', 'axios', 'eslint', 'quasar', 'apollo-client'
+            'i18n', 'axios', 'eslint', 'quasar', 'apollo-client',
         ],
     },
     {
@@ -203,7 +203,7 @@ const list: ListItem[] = [
         owner: 'wemake-services',
         link: 'https://github.com/wemake-services/wemake-vue-template',
         features: [
-            'jest', 'eslint', 'nuxt', 'axios', 'typescript', 'vuex', 
+            'jest', 'eslint', 'nuxt', 'axios', 'typescript', 'vuex',
         ],
     },
     {

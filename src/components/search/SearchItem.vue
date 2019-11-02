@@ -28,31 +28,10 @@
 </template>
 <script lang="ts">
 import { ListItem } from '@/types/index';
-import gql from 'graphql-tag';
 import { Component, Prop, Vue, Emit } from 'vue-property-decorator';
 
 @Component
 export class SearchItem extends Vue {
-    // private repoDetails = gql`query {
-    //         repository($name: String!, $owner: String!) {
-    //             pushedAt
-    //             shortDescriptionHTML
-    //             pullRequests(states:OPEN){
-    //             totalCount
-    //             }
-    //             issues(states:OPEN){
-    //             totalCount
-    //             }
-    //             languages(first:5) {
-    //             edges {
-    //                 node {
-    //                 color
-    //                 name
-    //                 }
-    //             }
-    //             }
-    //         }
-    //     }`;
     private opened: boolean = false;
     private hello: any = {};
     @Prop() private details!: ListItem;
@@ -62,15 +41,6 @@ export class SearchItem extends Vue {
     }
     private async onClick() {
         this.opened = ! this.opened;
-        // TODO, add loading details from GitHub API
-        // await this.$apollo.query({
-        //             query: this.repoDetails,
-        //             variables: {
-        //                 owner: String(this.details.owner),
-        //                 name: String(this.details.repo),
-        //         },
-        //     });
-        // e.g. name = Vue-Express-Mongo-Boilerplate, owner = Icebob
     }
 }
 export default SearchItem;
