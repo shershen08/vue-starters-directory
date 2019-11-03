@@ -6,8 +6,6 @@ const list: ListItem[] = [
         published: true,
         stars: 62,
         desc: '',
-        repo: 'vue-starter-kit',
-        owner: 'ademilter',
         link: 'https://github.com/ademilter/vue-starter-kit',
         features: [
             'router', 'i18n', 'vee-validate', 'axios',
@@ -18,8 +16,6 @@ const list: ListItem[] = [
         published: true,
         stars: 53,
         desc: 'A Vue.js starter kit that lets you focus on more programming and less configuration',
-        repo: 'vue-starter',
-        owner: 'rohitkrai03',
         link: 'https://github.com/rohitkrai03/vue-starter',
         features: [
             'eslint', 'i18n', 'vee-validate', 'axios',
@@ -30,8 +26,6 @@ const list: ListItem[] = [
         stars: 20,
         published: true,
         desc: '',
-        repo: 'vue-seed',
-        owner: 'dulin666',
         link: 'https://github.com/dulin666/vue-seed',
         features: [
             'eslint', 'i18n', 'vee-validate', 'axios',
@@ -42,8 +36,6 @@ const list: ListItem[] = [
         stars: 2300,
         published: true,
         desc: 'MEVN Full stack JS web app boilerplate with NodeJS, Express, Mongo and VueJS ',
-        repo: 'vue-express-mongo-boilerplate',
-        owner: 'icebob',
         link: 'https://github.com/icebob/vue-express-mongo-boilerplate',
         features: [
             'express', 'mongo', 'axios', 'apollo-client',
@@ -55,8 +47,6 @@ const list: ListItem[] = [
         stars: 1800,
         published: true,
         desc: 'The most complete boilerplate for production-ready PWAs. With focus on performance, development speed, and best practices',
-        repo: 'vuesion',
-        owner: 'vuesion',
         link: 'https://github.com/vuesion/vuesion',
         features: [
             'i18n', 'storybook', 'prettier', 'vue-router', 'ssr', 'jest', 'typescript', 'vuex',
@@ -67,8 +57,6 @@ const list: ListItem[] = [
         stars: 66,
         desc: 'A sample Apache Cordova application using VueJS.',
         published: true,
-        repo: 'cordovue',
-        owner: 'TheMushrr00m',
         link: 'https://github.com/TheMushrr00m/cordovue',
         features: [
             'cordova', 'vue-router', 'vuex', 'eslint',
@@ -79,8 +67,6 @@ const list: ListItem[] = [
         stars: 4800,
         desc: 'An ever-evolving, very opinionated architecture and dev environment for new Vue SPA projects using Vue CLI 3.',
         published: true,
-        repo: 'vue-enterprise-boilerplate',
-        owner: 'chrisvfritz',
         link: 'https://github.com/chrisvfritz/vue-enterprise-boilerplate',
         features: [
             'vue-router', 'vuex', 'eslint', 'prettier', 'jest', 'axios',  'normalize.css', 'vuepress', 'docker',
@@ -91,8 +77,6 @@ const list: ListItem[] = [
         desc: 'Light speed setup for MEVN(Mongo Express Vue Node) Apps',
         stars: 273,
         published: true,
-        repo: 'mevn-cli',
-        owner: 'madlabsinc',
         link: 'https://github.com/madlabsinc/mevn-cli',
         features: [
             'eslint', 'prettier', 'jest', 'vuepress', 'express',
@@ -103,8 +87,6 @@ const list: ListItem[] = [
         desc: 'Full featured Vue.js starter project for browser apps',
         stars: 35,
         published: true,
-        repo: 'friendly-vue-starter',
-        owner: 'mcongy',
         link: 'https://github.com/mcongy/friendly-vue-starter',
         features: [
             'vuex', 'vue-router', 'apollo-client', 'eslint', 'vue-property-decorator',
@@ -115,8 +97,6 @@ const list: ListItem[] = [
         desc: 'A modern starter which uses Vue 2, Vuex, Vue-router and Webpack 2 (and even Electron)',
         stars: 2400,
         published: true,
-        repo: 'vuepack',
-        owner: 'egoist',
         link: 'https://github.com/egoist/vuepack',
         features: [
             'vuex', 'vue-router', 'TestCafe', 'electron', 'eslint', 'webpack2.x',
@@ -127,8 +107,6 @@ const list: ListItem[] = [
         desc: 'A highly opinionated starter kit for building Single Page Applications with Laravel and Vue.js',
         stars: 926,
         published: true,
-        repo: 'spa-starter-kit',
-        owner: 'codecasts',
         link: 'https://github.com/codecasts/spa-starter-kit',
         features: [
             'vuex', 'vue-router', 'element-ui', 'axios', 'eslint', 'karma', 'Laravel', 'jwt',
@@ -139,8 +117,6 @@ const list: ListItem[] = [
         desc: 'A WordPress theme with the guts ripped out and replaced with Vue. ',
         stars: 960,
         published: true,
-        repo: 'vuejs-wordpress-theme-starter',
-        owner: 'EvanAgee',
         link: 'https://github.com/EvanAgee/vuejs-wordpress-theme-starter',
         features: [
             'vuex', 'vue-router',  'axios',
@@ -151,8 +127,6 @@ const list: ListItem[] = [
         desc: 'A starter template for building complete application using Node.js and Vue.js with some included packages and configurations to help start the development quickly.',
         stars: 45,
         published: true,
-        repo: 'vuejs-wordpress-theme-starter',
-        owner: 'mubaidr',
         link: 'https://github.com/mubaidr/node-vue-template',
         features: [
             'vue-router',  'eslint', 'webpack4.x', 'bootswatch',
@@ -163,8 +137,6 @@ const list: ListItem[] = [
         desc: '*NEW* Asp.net Core & Vue.js (ES6) SPA Starter kit - Vuex, webpack, Web API, Docker, and more',
         stars: 1100,
         published: true,
-        repo: 'aspnetcore-Vue-starter',
-        owner: 'TrilonIO',
         link: 'https://github.com/TrilonIO/aspnetcore-Vue-starter',
         features: [
             'vue-router',  'vuex', 'webpack4.x', 'axios', 'eslint', 'fortawesome', 'ssr',
@@ -175,8 +147,6 @@ const list: ListItem[] = [
         desc: 'A basic example of how to use VueJS, Express and PostgreSQL in conjunction.',
         stars: 40,
         published: true,
-        repo: 'pevn-starter',
-        owner: 'jesalg',
         link: 'https://github.com/jesalg/pevn-starter',
         features: [
             'webpack3.x', 'express', 'jade',
@@ -187,8 +157,6 @@ const list: ListItem[] = [
         desc: 'A complete starter kit that allows you create amazing apps that look native thanks to the Quasar Framework. Powered by an API developed in Laravel Framework using the easy GraphQL queries language. And ready to use the Google Firebase features.',
         stars: 40,
         published: true,
-        repo: 'laqul',
-        owner: 'laqul',
         link: 'https://github.com/laqul/laqul',
         features: [
             'i18n', 'axios', 'eslint', 'quasar', 'apollo-client',
@@ -199,8 +167,6 @@ const list: ListItem[] = [
         desc: 'Bleeding edge vue template focused on code quality and developer happiness',
         stars: 396,
         published: true,
-        repo: 'wemake-vue-template',
-        owner: 'wemake-services',
         link: 'https://github.com/wemake-services/wemake-vue-template',
         features: [
             'jest', 'eslint', 'nuxt', 'axios', 'typescript', 'vuex',
@@ -211,8 +177,6 @@ const list: ListItem[] = [
         desc: 'A highly opinionated Vue 2.0 template',
         stars: 14,
         published: true,
-        repo: 'vuecharged-template',
-        owner: 'mrboomer',
         link: 'https://github.com/mrboomer/vuecharged-template',
         features: [
             'jest', 'eslint', 'vuex', 'vue-router', 'i18n', 'webpack3.x',
@@ -223,8 +187,6 @@ const list: ListItem[] = [
         desc: '@django integrated with a full-featured @webpack + (@vuejs / vue-loader) setup with hot reload, linting, testing & css extraction.',
         stars: 414,
         published: true,
-        repo: 'vue-django',
-        owner: 'NdagiStanley',
         link: 'https://github.com/NdagiStanley/vue-django',
         features: [
             'jest', 'eslint', 'vue-router', 'webpack3.x',
@@ -235,8 +197,6 @@ const list: ListItem[] = [
         desc: '😍 Awesome Vue Boilerplate 🥳 Vue 🥰 Vuex, vuex-pathify 🤗 element-ui 🤲 tailwindcss',
         stars: 25,
         published: true,
-        repo: 'awesome-vue-boilerplate',
-        owner: 'NarHakobyan',
         link: 'https://github.com/NarHakobyan/awesome-vue-boilerplate',
         features: [
             'eslint', 'vue-router', 'i18n',  'vuex', 'vee-validate', 'webpack3.x', 'element-ui', 'vuepress',
@@ -247,8 +207,6 @@ const list: ListItem[] = [
         desc: 'This is a simple Vue template/starter kit, scaffolded on vue-cli 3, with full Auth functions to Login & Register',
         stars: 27,
         published: true,
-        repo: 'vue-auth-boilerplate',
-        owner: 'VPetar',
         link: 'https://github.com/VPetar/vue-auth-boilerplate',
         features: [
             'eslint', 'vue-router', 'axios',  'vuex',
